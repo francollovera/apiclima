@@ -1,0 +1,103 @@
+.contenedor{
+
+}
+.mainInfo {
+  background-color: rgb(48, 44, 44);
+  opacity: 80%;
+  padding: 40px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: -9%;
+}
+.img{
+  color: white;
+}
+.city {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bolder;
+  
+  margin-top: px;
+  
+  
+  color: white;
+  z-index: 2;
+}
+.city2{
+  color: transparent;
+}
+
+.country {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  
+}
+
+.condition {
+  font-size: 24px;
+  color: white;
+}
+
+.current {
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+}
+.ubicacion{
+  display: flex;
+ 
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  
+}
+.verelmapa{
+  width: 100%;
+  margin: 0 10%;
+  margin-top: 20px;
+  color: rgb(175, 170, 170);
+}
+.raya{
+ 
+  border-radius: 30px;
+  background-color: black;
+  width: 100%;
+  height: 0.05px;
+  margin-top: 10px;
+  opacity: 50%;
+}
+iframe {
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 10%;
+  position: relative;
+  top: 20px;
+  height: 250px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+iframe:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .mainInfo {
+    margin-top: 0%;
+  }
+
+  iframe {
+    width: 110%;
+    margin-left: -7%;
+    height: auto;
+  }
+}

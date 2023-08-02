@@ -1,0 +1,14 @@
+.weatherContainer {
+  width: 80%;
+  background-color: transparent;
+  margin: auto;
+ 
+  
+}
+
+@media (max-width: 480px) {
+  .weatherContainer {
+    width: 90%;
+    margin: auto;
+  }
+}
