@@ -14,19 +14,6 @@ export default function WeatherForm({ onChangeCity }) {
     setCity(e.target.value);
   }
 
-  async function fetchWeatherData(city) {
-    try {
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=15e99db8e2c54ad18e1204835231503`
-      );
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error al obtener datos del clima:", error);
-      return null;
-    }
-  }
-
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -48,8 +35,19 @@ export default function WeatherForm({ onChangeCity }) {
       onChangeCity(city);
     }
   }
-  
-  
+
+  async function fetchWeatherData(city) {
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_URL}?q=${city}&appid=${process.env.REACT_APP_KEY}`
+      );
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error al obtener datos del clima:", error);
+      return null;
+    }
+  }
 
   return (
     <form onSubmit={handleSubmit} className={styles.container}>
